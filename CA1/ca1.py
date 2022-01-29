@@ -12,7 +12,7 @@ XYZ2RGB = np.linalg.inv([[0.49,0.31,0.2],[0.177,0.813,0.01],[0,0.01,0.99]])
 # Need to get C and tristimulus values
 #  
 
-with open('CA1_Data.csv') as file:
+with open('CA1/CA1_Data.csv') as file:
     lines = file.read().splitlines()
     data = [[float(val) for val in line.split(',')] for line in lines]
 l, x, y, z, i_p, i_s, i_u = data
