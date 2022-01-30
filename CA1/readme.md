@@ -9,5 +9,5 @@ with w ∈ {x, y, z}, find and discuss the RGB representations of the object cap
 above spectral tristimulus system for all the 3 object reflectances.
 
 ## Instructions for execution
-    1. Open the Colab notebook
+    1. Open the Colab notebook CA1_Color.ipynb
     2. Run all the cells sequentially and see the output
