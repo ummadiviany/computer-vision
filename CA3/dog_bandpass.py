@@ -42,8 +42,12 @@ def get_difference_of_guassians(image, kernel_size, sigma_1, sigma_2):
     
     return guassian_blur_1, guassian_blur_2, abs(guassian_blur_1 - guassian_blur_2)
 
-
-
+def plot_kernel(kernel_size, sigma):
+        o1 = get_guassian_kernel(kernel_size, sigma)
+        o1 = o1 / max(o1.flatten())
+        o1 *= 255
+        o1 = o1.astype(np.uint8)
+        return o1
 
 if __name__ == '__main__':
 
@@ -58,9 +62,17 @@ if __name__ == '__main__':
 
     guassian_blur_1, guassian_blur_2, dog = get_difference_of_guassians(image, kernel_size, sigma1, sigma2)
 
-    # print("guassian_blur_1: " + str(guassian_blur_1))
-    # print("Shape of guassian_blur_1: " + str(guassian_blur_1.shape))
     plt.figure(1)
+    plt.subplot(1,2,1)
+    plt.imshow(plot_kernel(kernel_size, sigma1),cmap='gray')
+    plt.title(f"Guassian Kernel with sigma : {sigma1}")
+    plt.subplot(1,2,2)
+    plt.imshow(plot_kernel(kernel_size, sigma2),cmap='gray')
+    plt.title(f"Guassian Kernel with sigma : {sigma2}")
+    plt.show()
+
+
+    plt.figure(2)
     plt.subplot(2,2,1)
     plt.imshow(image)
     plt.title("Original Image")
@@ -75,18 +87,6 @@ if __name__ == '__main__':
     plt.title("Difference of Guassians")
     plt.show()
 
-    # def plot_kernel(kernel_size, sigma):
-    #     o1 = get_guassian_kernel(kernel_size, sigma)
-    #     o1 = o1 / max(o1.flatten())
-    #     o1 *= 255
-    #     o1 = o1.astype(np.uint8)
-    #     return o1
+    
 
-    # plt.figure(2)
-    # plt.subplot(1,2,1)
-    # plt.imshow(plot_kernel(kernel_size, sigma1),cmap='gray')
-    # plt.title(f"Guassian Kernel with sigma : {sigma1}")
-    # plt.subplot(1,2,2)
-    # plt.imshow(plot_kernel(kernel_size, sigma2),cmap='gray')
-    # plt.title(f"Guassian Kernel with sigma : {sigma2}")
-    # plt.show()
+    

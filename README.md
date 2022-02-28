@@ -8,3 +8,7 @@ This repository holds the coding assignments and term project for my Computer Vi
 ## [Assignment 2 : Color Space Transformations and Analysis](CA2)
         1. RGB to HSI
         2. RGB to HSI with Auto white balancing
+
+## [Assignment 3 : Difference of Gaussians(DoG)](CA3)
+        1. DoG as band pass filter
+        2. DoG as edge detector, blob detector
