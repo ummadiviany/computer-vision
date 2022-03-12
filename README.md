@@ -12,3 +12,10 @@ This repository holds the coding assignments and term project for my Computer Vi
 ## [Assignment 3 : Difference of Gaussians(DoG)](CA3)
         1. DoG as band pass filter
         2. DoG as edge detector, blob detector
+
+
+## [Assignment 4 : SSIM Analysis](CA4)
+        1. Resote the degraded images usign any of the two appropriate order-statistic filters.
+        2. Compare the SSIM values of the degraded images with the original image.
+        3. Tabulate the SSIM values of the degraded images.
+        4. Discuss the SSIM values of the degraded images.
